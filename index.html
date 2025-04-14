@@ -4,6 +4,30 @@
     <title>RealRealm Web</title>
 </head>
 <body>
+    <div style="text-align: center; margin: 1rem 0;">
+        <input type="text" id="searchInput" placeholder="Buscar..." style="padding: 0.5rem; width: 80%; max-width: 400px; border: 1px solid #ddd; border-radius: 4px;">
+        <button onclick="performSearch()" style="padding: 0.5rem; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Buscar</button>
+    </div>
+    <script>
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const elements = document.querySelectorAll('h1, h2, p, a, td');
+            let found = false;
+
+            elements.forEach(element => {
+                if (element.textContent.toLowerCase().includes(query)) {
+                    element.style.backgroundColor = 'yellow';
+                    found = true;
+                } else {
+                    element.style.backgroundColor = '';
+                }
+            });
+
+            if (!found) {
+                alert('No se encontraron resultados para: ' + query);
+            }
+        }
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,7 +75,7 @@
         }
 
         th {
-            background-color:rgb(250, 0, 246);
+            background-color:#4CAF50;
             color: white;
         }
 
@@ -83,7 +107,7 @@
     <h1>Real Realm Web</h1>
     <p style="font-family: Arial, sans-serif;">RealRealm es un servidor de Minecraft diseñado para que todos los usarios puedan unirse y disfrutar de lo que tiene que ofrecer. <br>
     esperamos que disfrute su instancia en nuestro hermoso servidor</p>
-    <p>Para más información sobre como obtener un realm diríjase a <a href="https://www.minecraft.net/es-es/realms"target="_blank">sitio web oficial de Minecraft.</a> </p>
+    <p>Para más información sobre como obtener un realm diríjase a <a href="https://www.minecraft.net/es-es/realms"target="_blank">sitio web oficial de Minecraft.</a></p>
     <hr>
     <h2>¿Qué es un Realm?</h2>
     <p>Un Realms es un servidor privado de Minecraft que permite a los jugadores crear y gestionar su propio mundo de juego. Es una forma fácil y segura de jugar con amigos y familiares, ya que solo las personas invitadas pueden unirse al servidor. Los Realms son ideales para aquellos que desean una experiencia de juego más controlada y personalizada.</p>
@@ -131,6 +155,7 @@ como un host de Bots de Discord, pero no nos enfocaremos en eso, en cambio, te e
 pagado.</p> 
 <p style="text-align: center;">
     <img src="images/Grass_Block.webp" alt="RealRealm Logo" style="width: 60px; height: auto;">
+    <hr>
     <h2>Diferencias entre un host premium y uno no premium</h2>
     <p>Para empezar, uno se paga y el otro no, obviamente un Host Premium te ofrecerá muchas más ventajas que uno no premium (es decir que no se paga)
         sin embargo puedes tener un sevidor sin la necesidad de pagar, una idea, además de las ya mostradas, sería <a href="https://aternos.org/:es-ES/"tarjet="_blank">Aternos.org</a> ésta página web ofrece un Host gratuito para ambas versiones de Minecraft (Java y bedrock) sin embargo, tiene un límite de tiempo para mantenerse abierto, es decir, una vez
@@ -138,7 +163,11 @@ pagado.</p>
     Aunque aternos te permita tener jugadores "infinitos" la realidad es que sus servidores a lo mucho podrán soportar 10 jugadores a lo mucho, si cuentas con mods o alguna modificación externa la cantidad disminuirá.</p>
    <p>Igual es destacable que Aternos cuenta con una opción de paga, pero, en lo personal, NO RECOMIENDO pagar los servicios de <a href="https://exaroton.com/:es-ES/"tarjet="_blank">exaroton</a> </a> </p>
 <h2>Comentarios o dudas</h2>
+<h2>Otros</h2>
 <p>Si tienes algún comentario, duda o sugerencia, no dudes en enviarnos un correo electrónico. Estamos aquí para ayudarte y mejorar tu experiencia.</p>
 <p>Correo de contacto: <a href="mailto:DIREWORLDGAMEs@gmail.com">Envíanos un correo electrónico</a></p>
+<p> Si deseas unirte a nuestro servidor de Discord, puedes hacerlo haciendo clic en el siguiente enlace: <a href="https://discord.gg/realrealm">Únete a nuestro Discord</a></p>
+<a href="index2.html"> Visítanos</a>
+</p>
 </body>
 </html>
